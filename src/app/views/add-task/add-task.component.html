@@ -1,0 +1,38 @@
+<div class="container">
+  <form [formGroup]="addTaskForm" (ngSubmit)="addTask(addTaskForm.value)">
+    <div class="form-floating">
+      <textarea
+        class="form-control"
+        placeholder="Leave a description here"
+        id="description"
+        style="height: 100px"
+        name="description"
+        formControlName="description"
+      ></textarea>
+      <label for="description">Description</label>
+      <div
+        class="errors d-flex justify-content-center"
+        *ngIf="
+          userValues['description']?.touched &&
+          userValues['description']?.invalid
+        "
+      >
+        <div *ngIf="userValues['description'].errors?.['required']">
+          *description is required*
+        </div>
+      </div>
+    </div>
+    <div class="mb-3 form-check">
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="exampleCheck1"
+        name="completed"
+        formControlName="completed"
+        value=true
+      />
+      <label class="form-check-label" for="exampleCheck1">Completed</label>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="addTaskForm.invalid">Submit</button>
+  </form>
+</div>

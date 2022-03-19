@@ -1,0 +1,21 @@
+<form #updateForm="ngForm" (ngSubmit)="updateTask(updateForm.value); updateForm.reset()" class="container">
+   
+    <div class="mb-3">
+      <label for="description" class="form-label">Update Task</label>
+      <textarea type="text" class="form-control" id="description"  name="description" [(ngModel)]="task.description" ngModel #description="ngModel" required ></textarea>
+    
+    </div>
+    <div class="mb-3 form-check">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="exampleCheck1"
+          name="completed"
+          [(ngModel)]="task.completed"
+          ngModel
+          #completed="ngModel"
+        />
+        <label class="form-check-label" for="exampleCheck1">Completed</label>
+      </div>
+    <button type="submit" class="btn btn-primary" [disabled]="updateForm.invalid">update</button>
+  </form>

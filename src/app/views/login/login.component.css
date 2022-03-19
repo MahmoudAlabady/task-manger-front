@@ -1,0 +1,6 @@
+.errors{
+    color:red;
+}
+.form-control.ng-pristine.ng-invalid.ng-touched{
+    border: 2px red solid;
+}
