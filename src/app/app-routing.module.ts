@@ -12,7 +12,7 @@ import { UpdateTaskComponent } from './views/update-task/update-task.component';
 const routes: Routes = [
   
   {path: 'signUp', component:SignUpComponent},
-  {path: '/', component:LoginComponent},
+  {path: '', component:LoginComponent},
   {path: 'profile', component:ProfileComponent,canActivate:[AuthGuardService]},
   {path: 'tasks',component:TasksComponent,canActivate:[AuthGuardService]},
   {path: 'addTask',component:AddTaskComponent,canActivate:[AuthGuardService]},
