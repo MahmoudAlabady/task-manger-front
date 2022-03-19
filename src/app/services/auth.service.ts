@@ -6,7 +6,7 @@ import { Tasks } from '../interfaces/taskInterface';
   providedIn: 'root'
 })
 export class AuthService {
-  url='http://localhost:3000/'
+  url='https://task-manager-api-alabady.herokuapp.com/'
   constructor(private http:HttpClient) { }
  signUp(credentials:any){
   // console.log(this.http.post(this.url+'users',credentials))

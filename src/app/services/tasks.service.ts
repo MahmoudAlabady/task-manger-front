@@ -6,7 +6,7 @@ import { Tasks } from '../interfaces/taskInterface';
   providedIn: 'root'
 })
 export class TasksService {
-  url='http://localhost:3000/'
+  url='https://task-manager-api-alabady.herokuapp.com/'
   constructor(private http:HttpClient) { }
   addTask(task:Tasks){
     return this.http.post(this.url+'tasks',task)

@@ -6,7 +6,7 @@ import { Users } from '../interfaces/userInerface';
   providedIn: 'root'
 })
 export class UserService {
-  url='http://localhost:3000/'
+  url='https://task-manager-api-alabady.herokuapp.com/'
   constructor(private http:HttpClient) { }
   getProfile(){
     return this.http.get<Users>(this.url+'profile');
